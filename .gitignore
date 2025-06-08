@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env
+
+# Logs
+logs/
+*.log
+
+# Banco de dados (se estiver usando SQLite local ou arquivos similares)
+*.sqlite
+*.sqlite3
+*.db
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build (caso você compile ou transpile algo)
+dist/
+build/
+
+# Sequelize migrations temporários
+.sequelize-auto-temp-*
+
+# Arquivos de testes
+coverage/
