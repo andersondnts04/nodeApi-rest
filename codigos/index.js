@@ -48,10 +48,12 @@ app.delete('/clientes/:id', async (req, res) => {
   try {
     const id = req.params.id;
     const cliente = await Cliente.findByPk(id);
-    if (!cliente) return res.status(404).json({ error: 'Cliente não encontrado' });
-
-    await cliente.destroy();
-    res.status(204).send();
+    if (!cliente) {
+      return res.status(404).json({ error: 'Cliente não encontrado' });
+    } else {
+      await cliente.destroy();
+      res.status(204).send();
+    }
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
