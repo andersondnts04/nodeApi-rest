@@ -5,19 +5,9 @@ const port = 3000;
 app.use(express.json());
 
 // Importa a conexão e o model Cliente
-const { sequelize, Cliente } = require('../models'); // caminho corrigido
+const { sequelize, Cliente } = require('../models');
 
-(async () => {
-  try {
-    await sequelize.authenticate();
-    console.log('Conexão com banco estabelecida!');
-    await sequelize.sync(); // cria as tabelas se não existirem
-  } catch (error) {
-    console.error('Erro na conexão com banco:', error);
-  }
-})();
 
-// Rotas CRUD para Clientes
 
 // Create
 app.post('/clientes', async (req, res) => {
